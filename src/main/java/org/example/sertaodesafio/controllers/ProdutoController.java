@@ -32,7 +32,7 @@ public class ProdutoController {
     public Produto save(@RequestBody Produto produto) {
         return this.produtoService.save(produto);
     }
-    @PutMapping
+    @PutMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
     public Produto update(@RequestBody Produto produto) {
         return this.produtoService.save(produto);
