@@ -1,7 +1,7 @@
 INSERT INTO perfil (name)
 VALUES ('admin');
 INSERT INTO usuario (ativo, id, pe_id, nome, senha)
-VALUES (true, 1, 1, 'sertao', '$2a$10$0zH50wN9537VSsEGgN.FJeBsP5Ms8Q77MFmWvMj4ifPgf4Jye4cmS');
+VALUES (true, 1, 1, 'sertão', '$2a$10$0zH50wN9537VSsEGgN.FJeBsP5Ms8Q77MFmWvMj4ifPgf4Jye4cmS');
 
 
 INSERT INTO produto (preco, quantidade,imagem, descricao, nome)
