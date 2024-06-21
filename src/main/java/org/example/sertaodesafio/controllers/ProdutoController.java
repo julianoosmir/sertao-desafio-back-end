@@ -27,19 +27,22 @@ public class ProdutoController {
     public Produto findById(@PathVariable Long id) {
         return this.produtoService.findById(id);
     }
+
     @PostMapping()
     @PreAuthorize("hasAuthority('ADMIN')")
     public Produto save(@RequestBody Produto produto) {
         return this.produtoService.save(produto);
     }
-    @PutMapping("/{id}")
+
+    @PutMapping()
     @PreAuthorize("hasAuthority('ADMIN')")
     public Produto update(@RequestBody Produto produto) {
         return this.produtoService.save(produto);
     }
-    @DeleteMapping
+
+    @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public void delete(@RequestBody Produto produto) {
-        this.produtoService.delete(produto.getId());
+    public void delete(@PathVariable Long id) {
+        this.produtoService.delete(id);
     }
 }
